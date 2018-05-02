@@ -6,7 +6,6 @@ img = cv2.imread('predictions.jpg',1)
 f=open("prediction.txt", "r")
 if f.mode != 'r':
 	print("Error Readin File")
-img = cv2.medianBlur(img,5)
 
 lines = f.readlines()
 for l in lines:
