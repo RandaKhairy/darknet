@@ -239,6 +239,12 @@ image **load_alphabet()
 void draw_detections(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes)
 {
     int i,j;
+    FILE *out_fd = fopen("prediction.txt", "w");
+    if (out_fd == NULL)
+    {
+	printf("Error opening file!\n");
+        exit(1);
+    }
 
     for(i = 0; i < num; ++i){
         char labelstr[4096] = {0};
@@ -284,13 +290,18 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             int right = (b.x+b.w/2.)*im.w;
             int top   = (b.y-b.h/2.)*im.h;
             int bot   = (b.y+b.h/2.)*im.h;
+	    fprintf(out_fd, "%f %f %f %f\n",b.x*im.w, b.y*im.h, b.w*im.w, b.h*im.h);
 
             if(left < 0) left = 0;
             if(right > im.w-1) right = im.w-1;
             if(top < 0) top = 0;
             if(bot > im.h-1) bot = im.h-1;
+	    
+	    
+
 
             draw_box_width(im, left, top, right, bot, width, red, green, blue);
+            //printf("Bounding Box: Left=%d, Top=%d, Right=%d, Bottom=%d\n", left, top, right, bot);
             if (alphabet) {
                 image label = get_label(alphabet, labelstr, (im.h*.03));
                 draw_label(im, top + width, left, label, rgb);
@@ -307,6 +318,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             }
         }
     }
+    fclose(out_fd);
 }
 
 void transpose_image(image im)
@@ -569,6 +581,7 @@ void show_image_cv(image p, const char *name, IplImage *disp)
         cvReleaseImage(&buffer);
     }
     cvShowImage(buff, disp);
+
 }
 #endif
 
