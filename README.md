@@ -1,8 +1,13 @@
-![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
+# traffic-light-color-detector
 
-# Darknet #
-Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation.
+Traffic light color detector using yolo darknet 	
 
-For more information see the [Darknet project website](http://pjreddie.com/darknet).
+Team members' names:		
 
-For questions or issues please use the [Google Group](https://groups.google.com/forum/#!forum/darknet).
+Emad Al-Din Tarek		
+
+Abdalla Mohamed Amin	
+
+Rawan Mohamed Mabrouk	
+
+Randa Mohamed Khairy		
