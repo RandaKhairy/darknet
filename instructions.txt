@@ -1,0 +1,4 @@
+1. git clone the repository
+2. open terminal in the darknet foler then write make in the terminal
+3. write in the terminal ./project <image_name.jpg>
+4. to exit from the project press two 0's
