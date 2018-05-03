@@ -1,4 +1,5 @@
 1. git clone the repository
-2. open terminal in the darknet foler then write make in the terminal
-3. write in the terminal ./project <image_name.jpg>
-4. to exit from the project press two 0's
+2. open terminal in the darknet foler then write make in the terminal\
+3. download pre-trained weight wget https://pjreddie.com/media/files/yolov2.weights and place it in the darknet folder
+4. write in the terminal ./project <image_name.jpg>
+5. to exit from the project press two 0's
