@@ -2,5 +2,5 @@
 
 imageName=$1
 
-./darknet detect cfg/yolov2.cfg yolo.weights $imageName
+./darknet detect cfg/yolov2.cfg yolov2.weights $imageName
 python process.py
