@@ -1,0 +1,6 @@
+#! /bin/sh
+
+imageName=$1
+
+./darknet detect cfg/yolov2.cfg yolo.weights $imageName
+python process.py
