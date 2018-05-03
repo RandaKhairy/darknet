@@ -11,3 +11,6 @@ Abdalla Mohamed Amin
 Rawan Mohamed Mabrouk	
 
 Randa Mohamed Khairy		
+
+Note:
+The instructions.txt file contains the required steps to run the project 
